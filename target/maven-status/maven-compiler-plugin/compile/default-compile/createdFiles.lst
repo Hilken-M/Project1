@@ -1,0 +1,3 @@
+spring\service\ProductService.class
+spring\model\Product.class
+spring\repository\ProductRepository.class
