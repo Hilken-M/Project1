@@ -3,7 +3,7 @@ package spring.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import spring.model.Product;
+import spring.model.Inventory;
 import spring.service.InventoryService;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class InventoryController {
     }
 
     @GetMapping
-    public List<Product> findAllInventory(){
+    public List<Inventory> findAllInventory(){
         return inventoryService.findAllInventory();
     }
 

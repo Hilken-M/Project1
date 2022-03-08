@@ -15,6 +15,6 @@ public interface InventoryRepository extends JpaRepository {
     @Query("from Product")
     List<Inventory> findAllProduct();
 
-    @Query("from Inventory where quatity = :quantity")
+    @Query("from Inventory where quantity = :quantity")
     Inventory findByInventoryId(String name);
 }

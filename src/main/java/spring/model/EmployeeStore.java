@@ -8,19 +8,17 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Product")
+@Table(name = "EmployeeStore")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @ToString
-public class Product {
+public class EmployeeStore {
 
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productId;
+    private int employeeId;
     @Column
-    private String itemName;
-    @Column
-    private int price;
+    private int storeId;
 }

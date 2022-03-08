@@ -2,22 +2,22 @@ package spring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import spring.model.Product;
-import spring.repository.ProductRepository;
+import spring.model.Inventory;
+import spring.repository.InventoryRepository;
 
 import java.util.List;
 
 @Component
 public class InventoryService {
-    ProductRepository productRepository;
+    InventoryRepository inventoryRepository;
 
     @Autowired
-    public InventoryService(ProductRepository InventoryRepository){
-        this.productRepository = InventoryRepository;
+    public InventoryService(InventoryRepository inventoryRepository){
+        this.inventoryRepository = inventoryRepository;
     }
 
-    public List<Product> findAllInventory(){
-        return productRepository.findAll();
+    public List<Inventory> findAllInventory(){
+        return inventoryRepository.findAll();
     }
 
 //    public Product findByProductName(String name) {
