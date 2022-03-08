@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Product")
@@ -17,11 +14,12 @@ import javax.persistence.Table;
 @Data
 @ToString
 public class Product {
+
     @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productID;
     @Column
-    private String name;
+    private String productName;
     @Column
     private double price;
-
-}

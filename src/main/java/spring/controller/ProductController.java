@@ -19,13 +19,13 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> findAll(){
+    public List<Product> findAllProduct(){
         return productService.findAllProduct();
     }
 
     @GetMapping({"{name}"})
-    public Product findByName(@PathVariable String name){
-        return (Product) productService.findProductByName(name);
+    public Product findByProductName(@PathVariable String name){
+        return (Product) productService.findByProductName(name);
     }
 
 //    @GetMapping

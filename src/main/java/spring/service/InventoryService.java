@@ -8,19 +8,19 @@ import spring.repository.ProductRepository;
 import java.util.List;
 
 @Component
-public class ProductService {
+public class InventoryService {
     ProductRepository productRepository;
 
     @Autowired
-    public ProductService(ProductRepository productRepository){
-        this.productRepository = productRepository;
+    public InventoryService(ProductRepository InventoryRepository){
+        this.productRepository = InventoryRepository;
     }
 
-    public List<Product> findAllProduct(){
+    public List<Product> findAllInventory(){
         return productRepository.findAll();
     }
 
-    public Product findByProductName(String name) {
-        return productRepository.findByProductName(name);
-    }
+//    public Product findByProductName(String name) {
+//        return productRepository.findByProductName(name);
+//    }
 }
