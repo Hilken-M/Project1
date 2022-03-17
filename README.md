@@ -1,4 +1,4 @@
-This is a low cost model of an Inventory Management System. 
+Inventory Management System
 
 This project is built utilizing the Spring Boot model. 
  - Required dependencies are pre-defined within the pom.xml file. 
